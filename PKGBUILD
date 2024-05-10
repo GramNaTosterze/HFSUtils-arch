@@ -35,6 +35,8 @@ build() {
 	cmake -B build -S "$pkgname" \
 		-DCMAKE_BUILD_TYPE='None' \
 		-DCMAKE_INSTALL_PREFIX=/usr \
+  		-DCMAKE_C_COMPILER=clang \
+    		-DCMAKE_CXX_COMPILER=clang++ \
 		-Wno-dev
 	cmake --build build
 }
